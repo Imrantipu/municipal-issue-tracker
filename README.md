@@ -40,7 +40,7 @@ This is a **production-grade portfolio project** demonstrating enterprise softwa
 
 ## Project Structure
 
-```
+```text
 municipal-issue-tracker/
 ├── docs/                          # Comprehensive project documentation
 │   ├── Sprint 1 - Authentication/
@@ -141,8 +141,14 @@ cd issue-tracker-backend
 # Run with coverage report
 ./mvnw test jacoco:report
 
-# View coverage report
+# View coverage report (platform-specific)
+# macOS:
 open target/site/jacoco/index.html
+# Linux:
+xdg-open target/site/jacoco/index.html
+# Windows:
+start target/site/jacoco/index.html
+# Or navigate to: file:///<project-path>/target/site/jacoco/index.html
 ```
 
 **Current Test Coverage**: 166+ tests, 100% domain & application layers
