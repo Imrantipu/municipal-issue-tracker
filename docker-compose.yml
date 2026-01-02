@@ -1,0 +1,58 @@
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: issuetracker-db
+    environment:
+      POSTGRES_DB: issuetracker
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: devpassword
+    ports:
+      - "5433:5432"  # Using 5433 (host port already in use)
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dev -d issuetracker"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - issuetracker-network
+
+  # Backend (Spring Boot) - Uncomment when ready
+  # backend:
+  #   build: ./issue-tracker-backend
+  #   container_name: issuetracker-backend
+  #   ports:
+  #     - "8080:8080"
+  #   environment:
+  #     - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/issuetracker
+  #     - SPRING_DATASOURCE_USERNAME=dev
+  #     - SPRING_DATASOURCE_PASSWORD=devpassword
+  #     - JWT_SECRET=${JWT_SECRET}
+  #   depends_on:
+  #     postgres:
+  #       condition: service_healthy
+  #   networks:
+  #     - issuetracker-network
+
+  # Frontend (Next.js) - Uncomment when ready
+  # frontend:
+  #   build: ./issue-tracker-frontend
+  #   container_name: issuetracker-frontend
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     - NEXT_PUBLIC_API_URL=http://localhost:8080
+  #   depends_on:
+  #     - backend
+  #   networks:
+  #     - issuetracker-network
+
+networks:
+  issuetracker-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local

@@ -1,0 +1,187 @@
+# ============================================
+# FULL-STACK PROJECT .gitignore
+# Backend: Spring Boot + Frontend: Next.js
+# ============================================
+
+# ============================================
+# BACKEND (Spring Boot / Java)
+# ============================================
+
+# Maven
+**/target/
+**/.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+**/pom.xml.tag
+**/pom.xml.releaseBackup
+**/pom.xml.versionsBackup
+**/pom.xml.next
+**/release.properties
+**/dependency-reduced-pom.xml
+**/.flattened-pom.xml
+
+# Gradle
+**/.gradle/
+**/build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# IDE - IntelliJ IDEA
+**/.idea/
+**/*.iws
+**/*.iml
+**/*.ipr
+**/out/
+
+# IDE - Eclipse
+**/.apt_generated
+**/.classpath
+**/.factorypath
+**/.project
+**/.settings
+**/.springBeans
+**/.sts4-cache
+
+# IDE - NetBeans
+**/nbproject/private/
+**/nbbuild/
+**/dist/
+**/nbdist/
+**/.nb-gradle/
+
+# IDE - VS Code
+**/.vscode/
+
+# Logs
+**/logs/
+**/*.log
+**/*.log.*
+
+# Test Coverage
+**/coverage/
+**/*.exec
+**/jacoco.exec
+
+# OS Files
+**/.DS_Store
+**/.DS_Store?
+**/._*
+**/.Spotlight-V100
+**/.Trashes
+**/ehthumbs.db
+**/Thumbs.db
+
+# ============================================
+# FRONTEND (Next.js / React)
+# ============================================
+
+# Dependencies
+**/node_modules/
+**/.pnp
+**/.pnp.js
+
+# Testing
+**/coverage
+
+# Next.js
+**/.next/
+**/out/
+
+# Production
+**/build
+**/dist
+
+# Misc
+**/.DS_Store
+**/*.pem
+
+# Debug
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+
+# Local env files
+**/.env*.local
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+
+# Vercel
+**/.vercel
+
+# TypeScript
+**/*.tsbuildinfo
+**/next-env.d.ts
+
+# Turbo
+**/.turbo
+
+# ============================================
+# SECRETS & ENVIRONMENT (SECURITY)
+# ============================================
+
+# Environment Variables
+.env
+.env.local
+.env.development
+.env.production
+.env.*.local
+*.env
+**/application-local.properties
+**/application-secret.properties
+
+# Secrets and Keys
+**/secrets/
+**/keys/
+**/*.pem
+**/*.key
+**/*.crt
+**/*.jks
+**/*.p12
+**/*.pfx
+
+# ============================================
+# DATABASE
+# ============================================
+
+**/*.db
+**/*.sqlite
+**/*.h2.db
+
+# ============================================
+# DOCKER
+# ============================================
+
+# Docker volumes
+**/postgres-data/
+**/mysql-data/
+**/mongodb-data/
+
+# ============================================
+# MISC
+# ============================================
+
+# CodeRabbit
+**/.coderabbit/
+
+# Temporary files
+**/*.tmp
+**/*.temp
+**/*.swp
+**/*.swo
+**/~*
+
+# Package files
+**/*.7z
+**/*.dmg
+**/*.gz
+**/*.iso
+**/*.jar
+**/*.rar
+**/*.tar
+**/*.zip
+
+# Backup files
+**/*.bak
+**/*.backup
