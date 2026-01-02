@@ -75,10 +75,11 @@ municipal-issue-tracker/
 - SLA tracking with timestamps
 - **112 tests** - 100% coverage
 
-### 📅 Sprint 3: Notification System (Planned)
-- Email notifications (JavaMailSender)
-- SMS notifications (Twilio)
-- Event-driven architecture
+### 📅 Sprint 3: Timeline & Dashboards (In Progress)
+- Timeline/audit trail tracking
+- Dashboard statistics APIs
+- Staff management endpoints
+- Infrastructure layer testing (85%+ overall coverage goal)
 
 ### 📅 Sprint 4-6: Frontend Development (Planned)
 - Next.js application
